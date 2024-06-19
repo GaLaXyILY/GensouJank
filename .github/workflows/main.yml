@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: nitori-artifacts-${{ steps.ref.outputs.branch }}
-          path: /home/runner/work/GensouJank/GensouJan/build/libs/*.jar
+          path: /home/runner/work/GensouJank/GensouJank/build/libs/*.jar
       - name: Reposilite upload
         run: ./gradlew publish
         env:
