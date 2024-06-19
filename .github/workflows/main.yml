@@ -29,7 +29,7 @@ jobs:
         run: | 
           ./gradlew build 
           mkdir -p ${{ github.workspace }}/build 
-          mv /home/runner/work/GensouJank/GensouJank/build/libs/GensouJanks.jar /home/runner/work/GensouJank/GensouJank/
+          mv /home/runner/work/GensouJank/GensouJank/build/libs/GensouJankScaffolding-1.0-SNAPSHOT.jar /home/runner/work/GensouJank/GensouJank/
       - name: Set version as environment variable 
         run: | 
           RELEASE_VERSION=$(./gradlew properties -q | grep "version:" | awk '{print $2}') 
@@ -44,6 +44,6 @@ jobs:
           prerelease: false  
           title: "Release ${{ env.RELEASE_VERSION }}"  
           files: |  
-             /home/runner/work/GensouJank/GensouJank/GensouJanks.jar
+             /home/runner/work/GensouJank/GensouJank/GensouJankScaffolding-1.0-SNAPSHOT.jar
       - name: DONE!!! 
         run: echo "done"
